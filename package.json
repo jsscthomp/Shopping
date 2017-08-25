@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/mc4tech/Shopping/issues"
   },
-  "homepage": "https://github.com/mc4tech/Shopping#readme"
+  "homepage": "https://github.com/mc4tech/Shopping#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
 }
