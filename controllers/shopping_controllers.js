@@ -1,5 +1,5 @@
 var express = require("express");
-
+var db = require("../models");
 var router = express.Router();
 
 // import model(shopping.js) database functions
@@ -16,18 +16,20 @@ router.get("/", function(req, res){
 	});
 });
 
-router.post("/", function(req, res){
-	shopping.create([
-		"shopping_name" , ""
-	], [
-		req.body.name, req.body.
-	],	function(){
-			res.redirect("/");
-	});		
+router.post("/browse", function(req, res){
+	console.log(req.body.shopping_name);
+	// shopping.create([
+	// 	"shopping_name" , ""
+	// ], [
+	// 	req.body.name, req.body.
+	// ],	function(){
+	// 		res.redirect("/");
+	// });
+			
 });
 
 router.put("/:id", function(req, res){
-	var condition = "id = " + req.params.id;
+	var condition = "id = " + req.params.search_id;
 	console.log(condition);
 	shopping.update({
 		shop: req.body.clothes
