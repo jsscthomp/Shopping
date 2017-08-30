@@ -142,10 +142,16 @@
                     url: queryURL,
                     method: "GET"
                 }).done(function(response) {
+                    
+                    //////////////////////////////////////
+                    //code used during testing////////////
+                    //////////////////////////////////////
                     // var data = JSON.stringify(response);
                     // console.log(response);
                     // console.log(data);
                     // console.log(response.products[0].image.sizes.Large.url)
+                    //////////////////////////////////////////////////////////
+
                     for(var i = 0; i < response.products.length; i++) {
                     //loops through the JSON response and logs 
                     //img url, brandedName, price and link to retailer
@@ -155,13 +161,24 @@
                     var altMessage = response.products[i].brandedName;
                     var price = response.products[i].priceLabel;
                     var retailUrl = response.products[i].clickUrl; 
-                    // var pInfo = 
-                    var description = response.products[i].description; 
-                    //div to hold product data
+
+                    ////////////////////////////////////////////////////////
+                    // This is for the detailed description/////////////////
+                    //decided not to use                 /////////////////// 
+                    // var description = response.products[i].description;//
+                    //////////////////////////////////////////////////////// 
+                    
+                    //***************************************************/////////////////////////
+                    //All elements created below are part of dynamically//////////////////////////
+                    //creating the html elements needed to build cards  //////////////////////////
+                    //according to https://getbootstrap.com/docs/4.0/components/card/#card-decks//
+                    //////////////////////////////////////////////////////////////////////////////
                     var productCard = $("<div>");
                     productCard.addClass("card");
-                    // productCard.addClass("col-md-4");
                     
+                    /////////////////////////////////
+                    //for product image//////////////
+                    /////////////////////////////////
                     var pCardImg = $("<img>");
                     pCardImg.addClass("card-img-top");
                     pCardImg.attr("src", image);
@@ -174,8 +191,8 @@
                     title.addClass("card-title");
                     $(pCardBody).append(title);
 
-                    var p = $("<p>" + description + "</p>");
-                    $(pCardBody).append(p);
+                    // var p = $("<p>" + description + "</p>");
+                    // $(pCardBody).append(p);
 
                     var span = $('<span>Retail Link</span>');
                     var retailerLink = $('<a>');
@@ -194,10 +211,14 @@
                     }else{
                         $("#g4").append(productCard);
                     }
-                    console.log(response.products[i].image.sizes.Large.url);
-                    console.log(response.products[i].brandedName);
-                    console.log(response.products[i].priceLabel);
-                    console.log(response.products[i].clickUrl);    
+
+                    ////////////////////////////////////////////////////////////
+                    //////////////Log it out////////////////////////////////////
+                    // console.log(response.products[i].image.sizes.Large.url);/
+                    // console.log(response.products[i].brandedName);///////////
+                    // console.log(response.products[i].priceLabel);////////////
+                    // console.log(response.products[i].clickUrl);//////////////
+                    ////////////////////////////////////////////////////////////
                     };
                 });
             });
