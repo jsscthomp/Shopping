@@ -1,0 +1,72 @@
+body {
+    height: auto;
+    width: auto;
+    background-image: url("http://i.imgur.com/BlkBiiU.png");
+    padding-bottom: 20px;
+}
+
+#logo-image {
+    margin-right: 0px;
+}
+
+h1 {
+    margin-top: 25px;
+    color: #f7f8fb;
+    font-family: 'Oxygen', sans-serif;
+}
+
+navbar {
+    display: inline-block;
+}
+
+body {
+    height: auto;
+    width: auto;
+    background-image: url("http://i.imgur.com/BlkBiiU.png");
+    padding-bottom: 20px;
+}
+
+#logo-image {
+    margin-right: 0px;
+}
+
+h1 {
+    margin-top: 25px;
+    color: #f7f8fb;
+    font-family: 'Oxygen', sans-serif;
+}
+
+navbar {
+    display: inline-block;
+}
+
+nav li {
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 20px;
+    font-family: 'Oxygen', sans-serif;
+}
+
+a {
+    color: #f7f8fb;
+}
+
+#band {
+    border-bottom: 3px solid #141632;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+nav li {
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+a {
+    color: #f7f8fb;
+}
+
+form.signup,
+form.login {
+    margin-top: 50px;
+}

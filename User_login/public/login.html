@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Passport Authentication</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+    <link href="stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Nav bar & main pic -->
+        <!-- <div class="jumbotron"> -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <!-- Left-align image -->
+                    <div class="media">
+                        <img id="logo-image" src="http://i.imgur.com/zBy3RDE.png?1" height="100">
+                        <h1 style="display: inline;">loogle</h1>
+                    </div>
+                    <a class="navbar-brand" href="#">
+
+                    </a>
+                </div>
+
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button> -->
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li><a href="../views/index.html">Home</a></li>
+                            <li><a href="../views/about.html">About Us</a></li>
+                            <li><a href="../views/contact.html">Contact</a></li>
+                            <li><a href="../User_login/public/login.html">Login</a></li>
+                        </ul>
+                    </div>
+                    <!-- </nav> -->
+                </nav>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h2>Login Form</h2>
+                <form class="login">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="email-input" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="password-input" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-default">Login</button>
+                </form>
+                <br />
+                <p>Or sign up <a href="/">here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+
+</body>
+
+</html>

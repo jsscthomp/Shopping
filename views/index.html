@@ -1,4 +1,3 @@
-
 <DOCTYPE html5>
     <html>
 
@@ -20,29 +19,29 @@
         <div class="container-fluid">
             <!-- Nav bar & main pic -->
             <!-- <div class="jumbotron"> -->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg" id="band">
 
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <!-- Left-align image -->
                         <div class="media">
-                            <img id="logo-image" src="http://i.imgur.com/zBy3RDE.png?1" height="100">
+                            <a class="navbar-brand" href="../views/index.html">
+                                <img id="logo-image" src="http://i.imgur.com/zBy3RDE.png?1" height="100">
+                            </a>
                             <h1 style="display: inline;">loogle</h1>
                         </div>
-                        <a class="navbar-brand" href="#">
-
-                        </a>
                     </div>
 
-                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <nav class="navbar navbar-expand-lg">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                                <li><a href="contact.html">Home</a></li>
-                                <li><a href="portfolio.html">About Us</a></li>
-                                <li><a href="aboutme.html">Login</a></li>
+                                <li><a href="../views/index.html">Home</a></li>
+                                <li><a href="../views/about.html">About Us</a></li>
+                                <li><a href="../views/contact.html">Contact</a></li>
+                                <li><a href="../User_login/public/login.html">Login</a></li>
                             </ul>
                         </div>
                         <!-- </nav> -->
@@ -54,10 +53,10 @@
         <br>
         <!-- This was added so the user can search for apparel -->
         <div class="container-fluid">
-            <div class="row">            
+            <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <div class="input-group">
-                        <input action="/browse" method="POST" type="text" class="form-control" id="search" placeholder="Search for..." aria-label="Search for..." name="search_name" >
+                        <input action="/browse" method="POST" type="text" class="form-control" id="search" placeholder="Search for..." aria-label="Search for..." name="search_name">
                         <span class="input-group-btn">
                             <button class="btn btn-secondary" type="button">Go!</button>
                         </span>
@@ -104,19 +103,19 @@
 
         <div class="container-fluid">
             <div id="g1" class="card-deck h-90">
-            
+
             </div>
             <br>
             <div id="g2" class="card-deck h-90">
-            
+
             </div>
             <br>
             <div id="g3" class="card-deck h-90">
-            
+
             </div>
             <br>
             <div id="g4" class="card-deck h-90">
-            
+
             </div>
 
         </div>
@@ -124,84 +123,84 @@
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-         <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://code.jquery.com/jquery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
         <script type="text/javascript">
-            $(document).ready(function(){
-            //on click event use ajax to get response and display products on DOM
-            $("button").click(function(){
-                $("#g1").empty();
-                $("#g2").empty();
-                $("#g3").empty();
-                $("#g4").empty();
-                var authKey = "uid6676-39776974-43";
-                var search = $("#search").val().trim();
-                var queryURL = "http://api.shopstyle.com/api/v2/products?pid=" + authKey + "&fts=" + search + "&offset=0&limit=10";
-                $.ajax({
-                    url: queryURL,
-                    method: "GET"
-                }).done(function(response) {
-                    // var data = JSON.stringify(response);
-                    // console.log(response);
-                    // console.log(data);
-                    // console.log(response.products[0].image.sizes.Large.url)
-                    for(var i = 0; i < response.products.length; i++) {
-                    //loops through the JSON response and logs 
-                    //img url, brandedName, price and link to retailer
-                    //img URL
-                    var image = response.products[i].image.sizes.Large.url;
-                    //alt for img
-                    var altMessage = response.products[i].brandedName;
-                    var price = response.products[i].priceLabel;
-                    var retailUrl = response.products[i].clickUrl; 
-                    // var pInfo = 
-                    var description = response.products[i].description; 
-                    //div to hold product data
-                    var productCard = $("<div>");
-                    productCard.addClass("card");
-                    // productCard.addClass("col-md-4");
-                    
-                    var pCardImg = $("<img>");
-                    pCardImg.addClass("card-img-top");
-                    pCardImg.attr("src", image);
-                    pCardImg.attr("alt", altMessage);
-                    
-                    var pCardBody = $("<div>");
-                    pCardBody.addClass("card-body");
+            $(document).ready(function() {
+                //on click event use ajax to get response and display products on DOM
+                $("button").click(function() {
+                    $("#g1").empty();
+                    $("#g2").empty();
+                    $("#g3").empty();
+                    $("#g4").empty();
+                    var authKey = "uid6676-39776974-43";
+                    var search = $("#search").val().trim();
+                    var queryURL = "http://api.shopstyle.com/api/v2/products?pid=" + authKey + "&fts=" + search + "&offset=0&limit=10";
+                    $.ajax({
+                        url: queryURL,
+                        method: "GET"
+                    }).done(function(response) {
+                        // var data = JSON.stringify(response);
+                        // console.log(response);
+                        // console.log(data);
+                        // console.log(response.products[0].image.sizes.Large.url)
+                        for (var i = 0; i < response.products.length; i++) {
+                            //loops through the JSON response and logs 
+                            //img url, brandedName, price and link to retailer
+                            //img URL
+                            var image = response.products[i].image.sizes.Large.url;
+                            //alt for img
+                            var altMessage = response.products[i].brandedName;
+                            var price = response.products[i].priceLabel;
+                            var retailUrl = response.products[i].clickUrl;
+                            // var pInfo = 
+                            var description = response.products[i].description;
+                            //div to hold product data
+                            var productCard = $("<div>");
+                            productCard.addClass("card");
+                            // productCard.addClass("col-md-4");
 
-                    var title = $("<h4>" + altMessage + "<br>" + price + "</h4>");
-                    title.addClass("card-title");
-                    $(pCardBody).append(title);
+                            var pCardImg = $("<img>");
+                            pCardImg.addClass("card-img-top");
+                            pCardImg.attr("src", image);
+                            pCardImg.attr("alt", altMessage);
 
-                    var p = $("<p>" + description + "</p>");
-                    $(pCardBody).append(p);
+                            var pCardBody = $("<div>");
+                            pCardBody.addClass("card-body");
 
-                    var span = $('<span>Retail Link</span>');
-                    var retailerLink = $('<a>');
-                    retailerLink.attr("href", retailUrl);    
-                    $(retailerLink).append(span);
+                            var title = $("<h4>" + altMessage + "<br>" + price + "</h4>");
+                            title.addClass("card-title");
+                            $(pCardBody).append(title);
 
-                    $(productCard).append(pCardImg);
-                    $(productCard).append(pCardBody);
-                    $(productCard).append(retailerLink);
-                    if(i < 3){
-                        $("#g1").append(productCard);
-                    }else if(i < 6) {
-                        $("#g2").append(productCard);
-                    }else if(i < 10){
-                        $("#g3").append(productCard);
-                    }else{
-                        $("#g4").append(productCard);
-                    }
-                    console.log(response.products[i].image.sizes.Large.url);
-                    console.log(response.products[i].brandedName);
-                    console.log(response.products[i].priceLabel);
-                    console.log(response.products[i].clickUrl);    
-                    };
+                            var p = $("<p>" + description + "</p>");
+                            $(pCardBody).append(p);
+
+                            var span = $('<span>Retail Link</span>');
+                            var retailerLink = $('<a>');
+                            retailerLink.attr("href", retailUrl);
+                            $(retailerLink).append(span);
+
+                            $(productCard).append(pCardImg);
+                            $(productCard).append(pCardBody);
+                            $(productCard).append(retailerLink);
+                            if (i < 3) {
+                                $("#g1").append(productCard);
+                            } else if (i < 6) {
+                                $("#g2").append(productCard);
+                            } else if (i < 10) {
+                                $("#g3").append(productCard);
+                            } else {
+                                $("#g4").append(productCard);
+                            }
+                            console.log(response.products[i].image.sizes.Large.url);
+                            console.log(response.products[i].brandedName);
+                            console.log(response.products[i].priceLabel);
+                            console.log(response.products[i].clickUrl);
+                        };
+                    });
                 });
             });
-        });
         </script>
     </body>
 
