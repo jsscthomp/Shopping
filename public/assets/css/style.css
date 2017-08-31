@@ -1,142 +1,146 @@
-                                body {
-                                height: auto;
-                                width: auto;
-                                background-image: url("http://i.imgur.com/BlkBiiU.png");
-                                padding-bottom: 20px;
-                            }
-                            
-                            #logo-image {
-                                margin-right: 0px;
-                            }
-                            
-                            #stylized {
-                                margin-top: 35px;
-                                margin-left: -12px;
-                                color: #f7f8fb;
-                                font-family: 'Oxygen', sans-serif;
-                            }
-                            
-                            navbar {
-                                display: inline-block;
-                            }
-                            
-                            nav li {
-                                margin-top: 20px;
-                                display: inline-block;
-                                padding: 10px 10px;
-                                font-size: 20px;
-                                font-family: 'Oxygen', sans-serif;
-                            }
-                            
-                            a {
-                                color: #f7f8fb;
-                            }
-                            
-                            #band {
-                                border-bottom: 3px solid #141632;
-                                padding: 5px;
-                                margin-top: 3px;
-                            }
-                            
-                            h4 {
-                                color: #141632;
-                                font-family: 'Oxygen', sans-serif;
-                                text-align: center;
-                            }
-                            
-                            .btn,
-                            .btn-secondary {
-                                background-color: #141632;
-                                border: none;
-                            }
-                            
-                            .carousel,
-                            .slide {
-                                height: auto;
-                                width: auto;
-                                align-content: center;
-                                margin: auto;
-                            }
-                            
-                            .carousel-inner {
-                                height: 100%;
-                                width: 100%;
-                                align-content: center;
-                            }
-                            
-                            .d-block {
-                                height: 100%;
-                                width: 100%;
-                            }
-                            
-                            span {
-                                font-family: 'Oxygen', sans-serif;
-                                color: #141632;
-                            }
-                            /*Contact page*/
-                            
-                            h2 {
-                                margin-top: 20px;
-                                text-align: center;
-                                color: #141632;
-                                font-size: 30px;
-                                font-family: 'Oxygen', sans-serif;
-                            }
-                            
-                            #form {
-                                text-align: left;
-                            }
-                            
-                            #contact {
-                                display: block;
-                                margin: auto;
-                                width: 30%;
-                            }
-                            
-                            p {
-                                margin-bottom: 0px;
-                                margin-top: 10px;
-                                color: #f7f8fb;
-                            }
-                            
-                            #send {
-                                background-color: #141632;
-                                color: #f7f8fb;
-                                border-radius: 5px;
-                            }
-                            /* about us page  */
-                            
-                            .about {
-                                font-size: 30px;
-                            }
-                            
-                            .card-body {
-                                color: #f7f8fb;
-                                font-family: 'Oxygen', sans-serif;
-                                background-color: #141632;
-                                border-radius: 5px;
-                                border: 2px solid #f7f8fb;
-                            }
-                            
-                            .card-title {
-                                text-align: center;
-                                color: #f7f8fb;
-                                font-family: 'Oxygen', sans-serif;
-                                background-color: #141632;
-                            }
-                            
-                            .card-img-top {
-                                border-radius: 5px;
-                                border: 2px solid #f7f8fb;
-                                height: auto;
-                            }
-                            
-                            .rounded-circle {
-                                height: 10%;
-                                margin-left: 55px;
-                                #g1 {
-                                    margin-top: 5%;
-                                }
-                                .card-img-top {
-                                    height: 75%;
-                                }
+    body {
+    height: auto;
+    width: auto;
+    background-image: url("http://i.imgur.com/BlkBiiU.png");
+    padding-bottom: 20px;
+}
+
+#logo-image {
+    margin-right: 0px;
+}
+
+#stylized {
+    margin-top: 35px;
+    margin-left: -12px;
+    color: #f7f8fb;
+    font-family: 'Oxygen', sans-serif;
+}
+
+navbar {
+    display: inline-block;
+}
+
+nav li {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 20px;
+    font-family: 'Oxygen', sans-serif;
+}
+
+a {
+    color: #f7f8fb;
+}
+
+#band {
+    border-bottom: 3px solid #141632;
+    padding: 5px;
+    margin-top: 3px;
+}
+
+h4 {
+    color: #141632;
+    font-family: 'Oxygen', sans-serif;
+    text-align: center;
+}
+
+.btn,
+.btn-secondary {
+    background-color: #141632;
+    border: none;
+}
+
+.carousel,
+.slide {
+    height: auto;
+    width: auto;
+    align-content: center;
+    margin: auto;
+}
+
+.carousel-inner {
+    height: 100%;
+    width: 100%;
+    align-content: center;
+}
+
+.d-block {
+    height: 100%;
+    width: 100%;
+}
+
+span {
+    font-family: 'Oxygen', sans-serif;
+    color: #141632;
+}
+
+
+/*Contact page*/
+
+h2 {
+    margin-top: 20px;
+    text-align: center;
+    color: #141632;
+    font-size: 30px;
+    font-family: 'Oxygen', sans-serif;
+}
+
+#form {
+    text-align: left;
+}
+
+#contact {
+    display: block;
+    margin: auto;
+    width: 30%;
+}
+
+p {
+    margin-bottom: 0px;
+    margin-top: 10px;
+    color: #f7f8fb;
+}
+
+#send {
+    background-color: #141632;
+    color: #f7f8fb;
+    border-radius: 5px;
+}
+
+
+/* about us page  */
+
+.about {
+    font-size: 30px;
+}
+
+.card-body {
+    color: #f7f8fb;
+    font-family: 'Oxygen', sans-serif;
+    background-color: #141632;
+    border-radius: 5px;
+    border: 2px solid #f7f8fb;
+}
+
+.card-title {
+    text-align: center;
+    color: #f7f8fb;
+    font-family: 'Oxygen', sans-serif;
+    background-color: #141632;
+}
+
+.card-img-top {
+    border-radius: 5px;
+    border: 2px solid #f7f8fb;
+    height: auto;
+}
+
+.rounded-circle {
+    height: 10%;
+    margin-left: 55px;
+    #g1 {
+        margin-top: 5%;
+    }
+    .card-img-top {
+        height: 75%;
+    }
