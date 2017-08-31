@@ -1,106 +1,94 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-	<title>Contact</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../public/assets/css/style.css">
+
+    <!--link to google fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Encode+Sans+Semi+Expanded|Mukta+Malar|Oxygen|Poiret+One|Quicksand" rel="stylesheet">
+
+
 </head>
-<style>
-	body{
-		background-image: url("http://i.imgur.com/BlkBiiU.png");
-	}
-
-	h1{
-		text-align: center;
-	}
-
-
-	form{
-		text-align: left;
-		margin-left: 560px;
-	}
-	textarea{
-				width: 250px;
-				height:150px;
-	}
-
-</style>
 
 <body>
- <nav class="navbar navbar-inverse">
-		
-		
+    <nav class="navbar navbar-expand-lg" id="band">
+
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- Left-align image -->
+                <div class="media">
+                    <a class="navbar-brand" href="../views/index.html">
+                        <img id="logo-image" src="http://i.imgur.com/zBy3RDE.png?1" height="100">
+                    </a>
+                    <h1 style="display: inline;" id="stylized">loogle</h1>
+                </div>
+            </div>
+
+            <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li><a href="../views/index.html">Home</a></li>
+                        <li><a href="../views/about.html">About Us</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                        <li><a href="../User_login/public/login.html.html">Login</a></li>
+                    </ul>
+                </div>
+                <!-- </nav> -->
+            </nav>
+        </div>
+    </nav>
+    <h1>Contact Us</h1>
 
 
-		<div class="container-fluid">
-			<div class="navbar-header">
 
-			<!-- Left-align image -->
-		<div class="media">
-			<div class="media-left">
-				<img src=""   height="50">
+    <form action="mailto:customerservice@Cloogle.com" method="post" enctype="text/plain">
+        Name:<br>
+        <input type="text" name="name"><br> E-mail:
+        <br>
+        <input id="email-input" type="text" name="E-mail"><br> Comment:
+        <br>
+        <textarea name=" message"></textarea><br>
+        <input id="send-email" type="submit" style="display: none"></button>
+        <button type="button" onclick="validateForm();">Send</button>
+        <!-- <input type="reset" value="Reset"> -->
+    </form>
 
-			</div>
 
-		</div>
-				
-			</div>
-				<a class="navbar-brand" href="#">Cloogle</a>
-			
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="contact.html">Home</a></li>
-				<li><a href="portfolio.html">About Us</a></li>
-				<li><a href="login.html" data-toggle="modal" data-target="#login-modal">Login</a></li>
 
-			</ul>	
-		</div>
-	</nav>
-		<h1>Contact Us</h1>		
 
-			
-	
-	<form action="mailto:customerservice@Cloogle.com" method="post"  enctype="text/plain">
-		Name:<br>
-		<input type="text" name="name"><br>
-		E-mail:<br>
-		<input id="email-input" type="text" name="E-mail"><br>
-		Comment:<br>
-		<textarea name=" message"></textarea><br>
-		<input id="send-email" type="submit" style="display: none"></button>
-		<button type="button" onclick="validateForm();">Send</button>
-		<!-- <input type="reset" value="Reset"> -->
-	</form>
-	
-		
 
- 
+    <footer class="bottom footer">
+        <div class="footer">
 
- <footer class="bottom footer">
- 	<div class="footer">
+        </div>
+    </footer>
 
-	</div>
- </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function validateForm() {
+            var emailInput = $("#email-input");
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-	function validateForm(){
-	var emailInput = $("#email-input");
+            var sendEmail = $("#send-email");
 
-	var sendEmail = $("#send-email");
+            var x = emailInput.val();
 
-	var x = emailInput.val();
-
-    var atpos = x.indexOf("@");
-    var dotpos = x.lastIndexOf(".");
-    if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
-        alert("Not a valid e-mail address");
-        return false;
-    }
-    else {
-    	sendEmail.click();
-    	return true;
-    }
-}
-</script>
+            var atpos = x.indexOf("@");
+            var dotpos = x.lastIndexOf(".");
+            if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
+                alert("Not a valid e-mail address");
+                return false;
+            } else {
+                sendEmail.click();
+                return true;
+            }
+        }
+    </script>
 </body>
+
 </html>
