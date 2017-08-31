@@ -69,7 +69,6 @@ h4 {
     width: 100%;
 }
 
-
 /*Contact page*/
 
 h2 {
@@ -131,4 +130,11 @@ p {
 .rounded-circle {
     height: 10%;
     margin-left: 55px;
+
+#g1{
+    margin-top: 5%;
+}
+
+.card-img-top{
+    height: 75%;
 }
