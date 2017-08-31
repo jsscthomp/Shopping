@@ -1,4 +1,34 @@
 form.signup,
 form.login {
-  margin-top: 50px;
+    margin-top: 50px;
+}
+
+body {
+    height: auto;
+    width: auto;
+    background-image: url("http://i.imgur.com/BlkBiiU.png");
+    padding-bottom: 20px;
+}
+
+#logo-image {
+    margin-right: 0px;
+}
+
+stylized {
+    margin-top: 25px;
+    color: #f7f8fb;
+    font-family: 'Oxygen', sans-serif;
+}
+
+navbar {
+    display: inline-block;
+}
+
+nav li {
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+a {
+    color: #f7f8fb;
 }
