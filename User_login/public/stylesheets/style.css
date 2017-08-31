@@ -14,8 +14,9 @@ body {
     margin-right: 0px;
 }
 
-stylized {
-    margin-top: 25px;
+#stylized {
+    margin-top: 35px;
+    margin-left: -2px;
     color: #f7f8fb;
     font-family: 'Oxygen', sans-serif;
 }
@@ -25,10 +26,40 @@ navbar {
 }
 
 nav li {
+    margin-top: 20px;
     display: inline-block;
     padding: 10px 10px;
+    font-size: 20px;
+    font-family: 'Oxygen', sans-serif;
 }
 
 a {
+    color: #f7f8fb;
+}
+
+#band {
+    border-bottom: 3px solid #141632;
+    padding: 5px;
+    margin-top: 3px;
+}
+
+h4 {
+    color: #141632;
+    font-family: 'Oxygen', sans-serif;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 20px;
+    text-align: center;
+    color: #141632;
+    font-size: 30px;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.btn,
+.btn-default {
+    background-color: #141632;
+    border: none;
     color: #f7f8fb;
 }
